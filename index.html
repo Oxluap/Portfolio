@@ -3,7 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6f1b8d68c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Paul Leblanc Portfolio</title>
   </head>
-  <body></body>
+  <body id="Home">
+    <header>
+      <h1>Paul.dev</h1>
+      <nav>
+        <a href="#Home" class="nav-active">Home</a>
+        <a href="#About">About</a>
+        <a href="#Project">Projects</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="Introduction" id="Home">
+        <div class="intro-container">
+          <div class="intro-text">
+            <h2 class="front-title">Front-End React Developer</h2>
+            <h3 class="front-about">
+              Hi, i'm Paul Leblanc. A passionate Front-end React Developer based
+              all over the world.
+            </h3>
+            <div class="linkedin-github">
+              <a
+                href="https://www.linkedin.com/in/paulleblanc31/"
+                target="_blank"
+                class="link-logo"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/Oxluap"
+                target="_blank"
+                class="link-logo"
+                ><i class="fa-brands fa-github fa-sm"></i
+              ></a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-content">
+              <img src="Images/Profile.png" alt="" />
+              <h2>Paul Leblanc <br /><span>Front-End Developer</span></h2>
+              <a href="#Contact">Hire me</a>
+            </div>
+          </div>
+        </div>
+        <div class="techstack">
+          <p>Tech Stack |</p>
+          <div class="logo-techstack">
+            <img src="Images/Html5.png" alt="Html 5" />
+            <img src="Images/CSS.png" alt="CSS 3" />
+            <img src="Images/JS.png" alt="Javascript" />
+            <img src="Images/React.png" alt="React Native" />
+            <img src="Images/Mongodb.png" alt="MongoDB" />
+            <img src="Images/Sass.png" alt="SASS" />
+          </div>
+        </div>
+      </section>
+
+      <article>
+        <div class="about" id="About">
+          <h2>About me</h2>
+          <p>
+            As a junior front-end developer, I've honed a robust set of skills
+            including HTML, CSS, JavaScript, React, and SCSS. Specializing in
+            the design and upkeep of responsive websites, I continuously strive
+            to deliver a seamless and intuitive user experience.
+          </p>
+          <p>
+            I shine in crafting dynamic and engaging interfaces through writing
+            clean, optimized code. I constantly explore the latest cutting-edge
+            development tools and techniques. My drive to learn and grow is
+            unending, persistently seeking out the industry's latest trends and
+            best practices.
+          </p>
+        </div>
+      </article>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
