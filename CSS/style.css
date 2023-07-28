@@ -6,10 +6,18 @@ body {
 h2 {
   font-size: 2em;
   text-transform: capitalize;
+  position: relative;
+  width: max-content;
 }
 
-section {
-  margin: 100px 200px 0px 200px;
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 5px;
+  width: 50px;
+  background: linear-gradient(90deg, #00ccff, #d400d4);
 }
 
 /* Header */
@@ -55,6 +63,10 @@ nav a.nav-active {
 }
 
 /* Home */
+
+.introduction {
+  margin: 100px 200px 0px 200px;
+}
 
 .front-title {
   font-weight: 900;
@@ -164,7 +176,7 @@ nav a.nav-active {
   opacity: 0;
 }
 
-.box-content h2 {
+.box-content h3 {
   position: relative;
   font-size: 1.3em;
   text-align: center;
@@ -225,8 +237,12 @@ nav a.nav-active {
   width: 65%;
 }
 
-/* Project */
+/* Services */
 
+.services {
+  margin: 80px 200px 150px 200px;
+  padding-top: 70px;
+}
 .services-container {
   display: flex;
   justify-content: space-between;
@@ -248,4 +264,102 @@ nav a.nav-active {
   height: 130px;
 }
 
-/*card*/
+/* Projects */
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects {
+  background: linear-gradient(to bottom, #162052, #27387c);
+  color: white;
+  padding: 30px 50px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-top: 35px;
+}
+
+.project-card {
+  width: 100%;
+  height: 550px;
+  background-color: #162052;
+  border-radius: 15px;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 325px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card-content h3 {
+  margin: 15px 0px;
+  font-size: 1.4em;
+}
+
+.project-card-content p {
+  color: #c7c7c7;
+  margin: 0px;
+}
+
+.project-card-tech {
+  display: flex;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #b412dc, #347eed);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn i {
+  font-size: 0.9em;
+  margin-right: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #347eed, #b412dc);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
