@@ -41,3 +41,21 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+let hireMeButton = document.querySelector('.box-content a[href="#Contact"]');
+
+hireMeButton.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  navLinks.forEach((link) => link.classList.remove("nav-active"));
+  let contactLink = document.querySelector('nav a[href="#Contact"]');
+  contactLink.classList.add("nav-active");
+
+  isScrolling = true;
+  var target = document.querySelector(this.getAttribute("href"));
+  target.scrollIntoView({ behavior: "smooth" });
+
+  setTimeout(() => {
+    isScrolling = false;
+  }, 1000);
+});
