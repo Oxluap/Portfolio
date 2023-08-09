@@ -556,3 +556,189 @@ footer p {
   background-color: #fff;
   color: #162052;
 }
+
+/* Smartphone */
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .introduction,
+  .services,
+  .contact {
+    margin: 20px 15px;
+  }
+
+  /*Header*/
+
+  header {
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1em;
+    width: auto;
+  }
+
+  nav {
+    width: 260px;
+  }
+
+  nav a {
+    font-size: 0.75em;
+  }
+
+  /* Home */
+
+  .intro-container {
+    flex-direction: column-reverse;
+    width: 100%;
+    align-items: center;
+  }
+
+  .box {
+    width: 300px;
+    height: 300px;
+  }
+
+  .box-content h3 {
+    font-size: 1.2em;
+  }
+
+  .intro-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .front-title {
+    width: 100%;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .front-about {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .techstack {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-techstack {
+    width: 100%;
+  }
+
+  /* About */
+
+  .about {
+    height: 600px;
+  }
+
+  /* Services */
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services h2 {
+    margin-bottom: 50px;
+  }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .services-card:hover {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .services-card p {
+    text-align: center;
+    margin: 0px;
+  }
+
+  /* Projects */
+
+  .projects {
+    padding: 50px 15px;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  .project-card-img-container {
+    height: 200px;
+  }
+
+  .project-card-content {
+    padding: 20px;
+  }
+
+  .project-card-content h3 {
+    font-size: 1.3em;
+  }
+
+  .project-card-content p {
+    text-align: center;
+  }
+
+  .project-card-tech img {
+    width: 40px;
+  }
+
+  /* Conntact */
+
+  .contact {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    flex-direction: column-reverse;
+    margin-top: 0px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form-img {
+    position: static;
+  }
+
+  .form-img img {
+    position: static;
+    width: 100%;
+  }
+
+  .form input,
+  #input-message {
+    padding: 0px 0px 0px 4px;
+  }
+}
