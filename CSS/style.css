@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: auto;
@@ -236,6 +240,12 @@ nav a.nav-active {
 
 .logo-techstack img {
   height: 50px;
+}
+
+.intro-text button {
+  font-size: 0.95em;
+  font-weight: 700;
+  margin-top: 35px;
 }
 
 /* About */
@@ -758,8 +768,8 @@ footer p {
 
   .form-img img {
     position: static;
-    width: auto;
-    height: 320px;
+    width: 100%;
+    height: auto;
   }
 
   .form input,
