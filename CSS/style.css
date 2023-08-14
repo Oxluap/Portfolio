@@ -265,7 +265,8 @@ nav a.nav-active {
 
 .about {
   width: 100%;
-  height: 450px;
+  height: auto;
+  padding: 60px 0px;
   background: linear-gradient(to bottom, #162052, #27387c);
   margin-top: 150px;
   display: flex;
@@ -616,7 +617,7 @@ footer p {
 
   nav a {
     display: none;
-    font-size: 0.75em;
+    font-size: 0.9em;
   }
 
   nav {
@@ -625,16 +626,11 @@ footer p {
     position: fixed;
     top: 0;
     left: 100%;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.9
-    ); /* arrière-plan semi-transparent */
-    flex-direction: column; /* affichage vertical */
-    align-items: center; /* centré horizontalement */
-    justify-content: center; /* centré verticalement */
-    transition: left 0.3s ease-in-out; /* transition douce */
+    background-color: rgba(255, 255, 255, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease-in-out;
   }
 
   nav.active {
@@ -713,13 +709,13 @@ footer p {
     transition: none;
   }
   .box:hover::before {
-    inset: -10px 140px; /* Reset à la valeur initiale pour éviter tout changement lors du survol */
+    inset: -10px 140px;
   }
   .box-content img {
     transition: none;
   }
   .box:hover .box-content img {
-    opacity: 1; /* Reset à la valeur initiale pour éviter tout changement lors du survol */
+    opacity: 1;
   }
 
   .box-content a,
@@ -730,7 +726,8 @@ footer p {
   /* About */
 
   .about {
-    height: 600px;
+    height: auto;
+    padding: 30px 0px;
   }
 
   /* Services */

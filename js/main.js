@@ -70,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.add("active");
     mobileMenuOpenButton.style.display = "none";
     mobileMenuCloseButton.style.display = "block";
-    body.classList.add("no-scroll"); // empêcher le défilement
+    body.classList.add("no-scroll");
   });
 
   mobileMenuCloseButton.addEventListener("click", function () {
     nav.classList.remove("active");
     mobileMenuOpenButton.style.display = "block";
     mobileMenuCloseButton.style.display = "none";
-    body.classList.remove("no-scroll"); // permettre le défilement
+    body.classList.remove("no-scroll");
   });
 
   // Fermer le menu lorsqu'un lien est cliqué
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("active");
       mobileMenuOpenButton.style.display = "block";
       mobileMenuCloseButton.style.display = "none";
-      body.classList.remove("no-scroll"); // permettre le défilement
+      body.classList.remove("no-scroll");
     });
   }
 });
