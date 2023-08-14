@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      shrink-to-fit="no"
+    />
     <link rel="stylesheet" type="text/css" href="CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,13 +23,21 @@
   <body id="Home">
     <header>
       <h1>Paul.dev</h1>
-      <nav>
-        <a href="#Home" class="nav-active">Home</a>
-        <a href="#About">About</a>
-        <a href="#Services">Services</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
-      </nav>
+      <div id="mobile-nav">
+        <i class="fa-solid fa-bars menu-toggle" id="mobile-menu-open"></i>
+        <i
+          class="fa-solid fa-times menu-toggle"
+          id="mobile-menu-close"
+          style="display: none"
+        ></i>
+        <nav>
+          <a href="#Home" class="nav-active">Home</a>
+          <a href="#About">About</a>
+          <a href="#Services">Services</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main>

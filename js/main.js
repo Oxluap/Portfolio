@@ -59,3 +59,35 @@ hireMeButton.addEventListener("click", function (e) {
     isScrolling = false;
   }, 1000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuOpenButton = document.getElementById("mobile-menu-open");
+  const mobileMenuCloseButton = document.getElementById("mobile-menu-close");
+  const nav = document.querySelector("nav");
+  const body = document.body;
+
+  mobileMenuOpenButton.addEventListener("click", function () {
+    nav.classList.add("active");
+    mobileMenuOpenButton.style.display = "none";
+    mobileMenuCloseButton.style.display = "block";
+    body.classList.add("no-scroll"); // empêcher le défilement
+  });
+
+  mobileMenuCloseButton.addEventListener("click", function () {
+    nav.classList.remove("active");
+    mobileMenuOpenButton.style.display = "block";
+    mobileMenuCloseButton.style.display = "none";
+    body.classList.remove("no-scroll"); // permettre le défilement
+  });
+
+  // Fermer le menu lorsqu'un lien est cliqué
+  const navLinks = nav.querySelectorAll("a");
+  for (const link of navLinks) {
+    link.addEventListener("click", function () {
+      nav.classList.remove("active");
+      mobileMenuOpenButton.style.display = "block";
+      mobileMenuCloseButton.style.display = "none";
+      body.classList.remove("no-scroll"); // permettre le défilement
+    });
+  }
+});

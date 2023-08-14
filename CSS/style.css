@@ -47,6 +47,7 @@ nav {
   width: 400px;
   display: flex;
   justify-content: space-between;
+  z-index: 5;
 }
 
 nav a {
@@ -64,6 +65,18 @@ nav a:active {
 
 nav a.nav-active {
   border-bottom: 2px solid #000; /* Même style que pour les liens survolés ou actifs */
+}
+
+@media (min-width: 769px) {
+  #mobile-menu-open,
+  #mobile-menu-close {
+    display: none !important;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 
 /* Home */
@@ -589,6 +602,7 @@ footer p {
 
   header {
     padding: 0 10px;
+    height: 50px;
   }
 
   header h1 {
@@ -596,12 +610,57 @@ footer p {
     width: auto;
   }
 
-  nav {
-    width: 260px;
+  #mobile-nav i {
+    display: block;
   }
 
   nav a {
+    display: none;
     font-size: 0.75em;
+  }
+
+  nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* arrière-plan semi-transparent */
+    flex-direction: column; /* affichage vertical */
+    align-items: center; /* centré horizontalement */
+    justify-content: center; /* centré verticalement */
+    transition: left 0.3s ease-in-out; /* transition douce */
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav.active a {
+    display: block;
+    margin: 15px 0;
+    border-bottom: none;
+  }
+
+  #mobile-nav {
+    position: relative;
+  }
+  #mobile-nav i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
   }
 
   /* Home */
@@ -647,6 +706,25 @@ footer p {
 
   .logo-techstack img {
     height: 40px;
+  }
+
+  .box::before {
+    animation: none;
+    transition: none;
+  }
+  .box:hover::before {
+    inset: -10px 140px; /* Reset à la valeur initiale pour éviter tout changement lors du survol */
+  }
+  .box-content img {
+    transition: none;
+  }
+  .box:hover .box-content img {
+    opacity: 1; /* Reset à la valeur initiale pour éviter tout changement lors du survol */
+  }
+
+  .box-content a,
+  .box-content h3 {
+    display: none;
   }
 
   /* About */
@@ -768,7 +846,7 @@ footer p {
 
   .form-img img {
     position: static;
-    width: 100%;
+    width: 90%;
     height: auto;
   }
 
