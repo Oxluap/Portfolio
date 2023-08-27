@@ -294,7 +294,6 @@ nav a.nav-active {
 .services-card {
   margin-top: 35px;
   width: 25%;
-  height: 300px;
   padding: 25px;
 }
 
@@ -330,9 +329,10 @@ nav a.nav-active {
 
 .project-card {
   width: 100%;
-  height: 550px;
+  height: auto;
   background-color: #162052;
   border-radius: 15px;
+  padding-bottom: 30px;
 }
 
 .project-card-img-container {
@@ -380,6 +380,13 @@ nav a.nav-active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 10px;
+}
+
+.project-challenge {
+  margin-top: 15px;
+  color: #c7c7c7;
+  text-align: center;
 }
 
 .project-card-content h3 {
@@ -387,8 +394,8 @@ nav a.nav-active {
   font-size: 1.4em;
 }
 
-.project-card-content p {
-  color: #c7c7c7;
+.project-description {
+  font-weight: 500;
   margin: 0px;
   text-align: center;
 }
@@ -691,6 +698,11 @@ footer p {
     margin-bottom: 35px;
   }
 
+  .link-logo:hover {
+    background-color: initial;
+    color: initial;
+  }
+
   .techstack {
     flex-direction: column;
     align-items: center;
@@ -736,6 +748,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 130px;
   }
 
   .services h2 {
@@ -752,6 +765,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     padding: 0px;
+    margin-bottom: 50px;
   }
 
   .services-card:hover {
@@ -775,7 +789,7 @@ footer p {
   }
 
   .project-card-img-container {
-    height: 200px;
+    height: 250px;
   }
 
   .project-card-content {
@@ -860,5 +874,10 @@ footer p {
   .projects-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .services-card:hover {
+    box-shadow: none;
+    background-color: initial;
   }
 }
